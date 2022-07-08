@@ -1,7 +1,5 @@
 name: 🔨 Build build-logic
-on:
-  push:
-    branches: [ main ]
+on: [push]
 
 jobs:
   validate-wrapper:
