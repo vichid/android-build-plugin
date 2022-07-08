@@ -1,10 +1,9 @@
 [versions]
 detekt = "1.21.0-RC2"
-detekt-custom-rules = "0.0.1"
+detekt-customRules = "0.1.0"
 gradlePlugins-android = "7.2.1"
 gradlePlugins-anvil = "2.4.1"
 gradlePlugins-autoManifest = "2.0"
-gradlePlugins-buildLogic = "0.0.26"
 gradlePlugins-dependencyAnalysis = "1.10.0"
 gradlePlugins-doctor = "0.8.1"
 gradlePlugins-junit5 = "1.8.2.1"
@@ -20,10 +19,11 @@ moshi-kotlin = "1.13.0"
 
 [libraries]
 detekt-api = { module = "io.gitlab.arturbosch.detekt:detekt-api", version.ref = "detekt" }
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+detekt-customRules = { module = "io.github.vichid:detekt.rules", version.ref = "detekt-customRules" }
 gradlePlugins-android = { module = "com.android.tools.build:gradle", version.ref = "gradlePlugins-android" }
 gradlePlugins-anvil = { module = "com.squareup.anvil:gradle-plugin", version.ref = "gradlePlugins-anvil" }
 gradlePlugins-autoManifest = { module = "com.gradleup:auto-manifest-plugin", version.ref = "gradlePlugins-autoManifest" }
-gradlePlugins-buildLogic = { module = "io.github.vichid:build-logic", version.ref = "gradlePlugins-buildLogic" }
 gradlePlugins-dependencyAnalysis = { module = "com.autonomousapps:dependency-analysis-gradle-plugin", version.ref = "gradlePlugins-dependencyAnalysis" }
 gradlePlugins-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 gradlePlugins-doctor = { module = "com.osacky.doctor:doctor-plugin", version.ref = "gradlePlugins-doctor" }
