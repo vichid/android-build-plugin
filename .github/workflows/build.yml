@@ -1,0 +1,31 @@
+name: 🔨 Build build-logic
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  validate-wrapper:
+    name: 🏗 Validate wrapper
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v1
+  build:
+    name: 🔨 Build
+    needs: validate-wrapper
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: ./.github/actions/setup
+
+      - uses: gradle/gradle-build-action@v2
+        with:
+          arguments: :build-plugin:assemble
+        env:
+          GITHUB_TOKEN_PUBLISH: ${{ secrets.GITHUB_TOKEN }}
