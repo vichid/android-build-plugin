@@ -1,0 +1,15 @@
+name: 'Setup'
+description: 'Checks out code and sets up the JDK'
+runs:
+  using: "composite"
+  steps:
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: 17
+        distribution: 'zulu'
+
+    - name: Copy CI gradle.properties
+      run: mkdir -p ~/.gradle ; cp .github/ci-gradle.properties ~/.gradle/gradle.properties
+      shell: bash
