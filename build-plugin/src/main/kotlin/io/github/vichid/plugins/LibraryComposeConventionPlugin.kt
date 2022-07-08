@@ -1,3 +1,5 @@
+package io.github.vichid.plugins
+
 import io.github.vichid.ComposeConfiguration.configureComposeLibrary
 import io.github.vichid.KspConfiguration.configureKsp
 import io.github.vichid.PaparazziConfiguration.configurePaparazzi

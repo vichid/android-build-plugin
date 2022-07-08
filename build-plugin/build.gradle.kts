@@ -23,44 +23,44 @@ publishing {
 }
 
 gradlePlugin {
+    group = "io.github.vichid"
+    version = System.getenv("GITHUB_REF_NAME")
     plugins {
-        group = "io.github.vichid"
-        version = System.getenv("GITHUB_REF_NAME")
         register("root") {
             id = "io.github.vichid.root"
-            implementationClass = "AndroidProjectConventionPlugin"
+            implementationClass = "io.github.vichid.plugins.AndroidProjectConventionPlugin"
         }
         register("application") {
             id = "io.github.vichid.application"
-            implementationClass = "ApplicationConventionPlugin"
+            implementationClass = "io.github.vichid.plugins.ApplicationConventionPlugin"
         }
         register("applicationCompose") {
             id = "io.github.vichid.application.compose"
-            implementationClass = "ApplicationComposeConventionPlugin"
+            implementationClass = "io.github.vichid.plugins.ApplicationComposeConventionPlugin"
         }
         register("library") {
             id = "io.github.vichid.library"
-            implementationClass = "LibraryConventionPlugin"
+            implementationClass = "io.github.vichid.plugins.LibraryConventionPlugin"
         }
         register("libraryCompose") {
             id = "io.github.vichid.library.compose"
-            implementationClass = "LibraryComposeConventionPlugin"
+            implementationClass = "io.github.vichid.plugins.LibraryComposeConventionPlugin"
         }
         register("jvm") {
             id = "io.github.vichid.jvm"
-            implementationClass = "JvmConventionPlugin"
+            implementationClass = "io.github.vichid.plugins.JvmConventionPlugin"
         }
         register("test") {
             id = "io.github.vichid.test"
-            implementationClass = "TestConventionPlugin"
+            implementationClass = "io.github.vichid.plugins.TestConventionPlugin"
         }
         register("kotlin") {
             id = "io.github.vichid.kotlin"
-            implementationClass = "KotlinConventionPlugin"
+            implementationClass = "io.github.vichid.plugins.KotlinConventionPlugin"
         }
         register("module") {
             id = "io.github.vichid.module"
-            implementationClass = "ModuleConventionPlugin"
+            implementationClass = "io.github.vichid.plugins.ModuleConventionPlugin"
         }
     }
 }

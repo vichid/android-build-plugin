@@ -1,3 +1,5 @@
+package io.github.vichid.plugins
+
 import io.github.vichid.AutoManifestConfiguration.configureAutoManifest
 import io.github.vichid.DependencyUpdatesConfiguration.configureDependencyUpdates
 import io.github.vichid.GraphRulesConfiguration.configureGraphRules
