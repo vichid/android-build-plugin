@@ -1,10 +1,7 @@
 plugins {
-    `kotlin-dsl`
-    `maven-publish`
+    id("maven-publish")
+    id("java-gradle-plugin")
 }
-
-group = "io.github.vichid"
-version = "0.0.26"
 
 java {
     toolchain {
@@ -16,7 +13,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/vichid/playground")
+            url = uri("https://maven.pkg.github.com/vichid/android-build-plugin")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN_PUBLISH")
@@ -27,6 +24,8 @@ publishing {
 
 gradlePlugin {
     plugins {
+        group = "io.github.vichid"
+        version = System.getenv("GITHUB_REF_NAME")
         register("root") {
             id = "io.github.vichid.root"
             implementationClass = "AndroidProjectConventionPlugin"
