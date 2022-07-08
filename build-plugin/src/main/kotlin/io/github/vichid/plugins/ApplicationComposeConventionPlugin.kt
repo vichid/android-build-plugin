@@ -1,3 +1,5 @@
+package io.github.vichid.plugins
+
 import io.github.vichid.ComposeConfiguration.configureComposeApp
 import io.github.vichid.KspConfiguration.configureKsp
 import io.github.vichid.ShowkaseConfiguration.configureShowkase

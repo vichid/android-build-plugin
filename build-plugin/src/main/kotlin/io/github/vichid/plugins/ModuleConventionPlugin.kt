@@ -1,3 +1,5 @@
+package io.github.vichid.plugins
+
 import io.github.vichid.ModuleGenerationTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project

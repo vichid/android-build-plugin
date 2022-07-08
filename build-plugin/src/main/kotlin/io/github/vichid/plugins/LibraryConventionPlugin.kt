@@ -1,3 +1,5 @@
+package io.github.vichid.plugins
+
 import io.github.vichid.AndroidConfiguration.configureLibraryAndroid
 import io.github.vichid.AnvilConfiguration.configureAnvil
 import io.github.vichid.LintConfiguration.disableLintFromCheck

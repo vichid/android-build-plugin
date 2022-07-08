@@ -1,3 +1,5 @@
+package io.github.vichid.plugins
+
 import io.github.vichid.AndroidConfiguration.configureAppAndroid
 import io.github.vichid.AnvilConfiguration.configureAnvil
 import io.github.vichid.AppVersioningConfiguration.configureAppVersioning
