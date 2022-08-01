@@ -73,16 +73,15 @@ dependencies {
     implementation(libs.gradlePlugins.versionUpdate)
     implementation(libs.mixpanel.java)
     implementation(libs.moshi.kotlin)
-
-    compileOnly(libs.detekt.api)
-    compileOnly(libs.gradlePlugins.android)
-    compileOnly(libs.gradlePlugins.anvil)
-    compileOnly(libs.gradlePlugins.autoManifest)
-    compileOnly(libs.gradlePlugins.detekt)
-    compileOnly(libs.gradlePlugins.kotlin)
-    compileOnly(libs.gradlePlugins.kover) {
+    implementation(libs.detekt.api)
+    implementation(libs.gradlePlugins.android)
+    implementation(libs.gradlePlugins.anvil)
+    implementation(libs.gradlePlugins.autoManifest)
+    implementation(libs.gradlePlugins.detekt)
+    implementation(libs.gradlePlugins.kotlin)
+    implementation(libs.gradlePlugins.kover) {
         exclude(group = "org.jetbrains.kotlin", module = "kotlin-stdlib-jdk8")
     }
-    compileOnly(libs.gradlePlugins.ksp)
-    compileOnly(libs.gradlePlugins.paparazzi)
+    implementation(libs.gradlePlugins.ksp)
+    implementation(libs.gradlePlugins.paparazzi)
 }

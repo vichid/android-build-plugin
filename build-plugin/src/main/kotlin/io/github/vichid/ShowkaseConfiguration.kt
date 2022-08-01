@@ -13,8 +13,8 @@ object ShowkaseConfiguration {
             val libs: VersionCatalog =
                 project.extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
-                "debugImplementation"(libs.findLibrary("showkase").get().get())
-                "kspDebug"(libs.findLibrary("showkaseProcessor").get().get())
+                add("debugImplementation", libs.findLibrary("showkase").get())
+                add("kspDebug", libs.findLibrary("showkaseProcessor").get())
             }
         }
 }

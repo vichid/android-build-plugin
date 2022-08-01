@@ -53,8 +53,8 @@ object DetektConfiguration {
             val libs: VersionCatalog =
                 project.extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
-                "detektPlugins"(libs.findLibrary("detekt.formatting").get().get())
-                "detektPlugins"(libs.findLibrary("detekt.customRules").get().get())
+                add("detektPlugins", libs.findLibrary("detekt.formatting").get())
+                add("detektPlugins", libs.findLibrary("detekt.customRules").get())
             }
         }
 }
