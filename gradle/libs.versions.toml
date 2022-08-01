@@ -14,7 +14,7 @@ gradlePlugins-ruler = "1.2.1"
 gradlePlugins-versionUpdate = "0.42.0"
 kotlin = "1.7.0"
 ksp = "1.7.0-1.0.6"
-mixpanel-java = "1.5.0"
+mixpanel-java = "1.5.1"
 moshi-kotlin = "1.13.0"
 
 [libraries]
